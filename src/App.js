@@ -1,20 +1,29 @@
 import { Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Courses from "./components/Courses";
 import About from "./components/About";
 
+
+
+import Registration from "./components/Registration";
+import Home from "./components/Home";
+import Navbar from "./components/Navbar";
+
+
 function App() {
-  return (
-    <div>
-     <Navbar/>
-     <Routes>
-       <Route path="/courses" Component={Courses} />
-        <Route path="/about" Component={About} />
 
-     </Routes>
+ return(
+  <div>
+    <Navbar />
+ <Routes>
+      <Route path="/about" Component={About} />
+      <Route path="/registration" Component={Registration} />
+      <Route path="/" Component={Home} />
 
-    </div>
-  );
+          
+        
+
+     </Routes> </div>
+  
+ )
 }
 
 export default App;
